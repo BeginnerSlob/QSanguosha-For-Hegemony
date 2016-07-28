@@ -91,7 +91,7 @@ bool QiceCard::targetFilter(const QList<const Player *> &targets, const Player *
         mutable_card->setCanRecast(false);
         mutable_card->deleteLater();
     }
-    return mutable_card && targets.length() < Self->getHandcardNum()
+    return mutable_card && targets.length() < subcardsLength()
         && mutable_card->targetFilter(targets, to_select, Self)
         && !Self->isProhibited(to_select, mutable_card, targets);
 }
@@ -141,7 +141,7 @@ bool QiceCard::targetsFeasible(const QList<const Player *> &targets, const Playe
                 continue;
             ++target_num;
         }
-        if (target_num > Self->getHandcardNum())
+        if (target_num > subcardsLength())
             return false;
     }
     return mutable_card && mutable_card->targetsFeasible(targets, Self);
