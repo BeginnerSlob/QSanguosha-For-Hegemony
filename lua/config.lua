@@ -51,11 +51,13 @@ config = {
 		"StandardCard",
 		"FormationEquip",
 		"MomentumEquip" ,
+		"ChangeEquip" ,
 		"StrategicAdvantage",
 
 		"Standard",
 		"Formation",
 		"Momentum",
+		"Change",
 		"Test",
 		"JiangeDefense"
 	},

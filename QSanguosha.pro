@@ -119,7 +119,8 @@ SOURCES += \
     src/util/recorder.cpp \
     swig/sanguosha_wrap.cxx \
     src/ui/guhuobox.cpp \
-	src/ui/cardchoosebox.cpp 
+	src/ui/cardchoosebox.cpp \ 
+    src/package/change.cpp
 
 HEADERS += \
     src/client/aux-skills.h \
@@ -231,7 +232,8 @@ HEADERS += \
     src/util/recorder.h \
     src/util/socket.h \
     src/ui/guhuobox.h \
-	src/ui/cardchoosebox.h
+	src/ui/cardchoosebox.h \
+    src/package/change.h
 
 FORMS += \
     src/dialog/cardoverview.ui \

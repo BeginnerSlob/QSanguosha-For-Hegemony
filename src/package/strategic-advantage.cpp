@@ -239,22 +239,6 @@ Breastplate::Breastplate(Card::Suit suit, int number)
     transferable = true;
 }
 
-// class BreastplateViewAsSkill : public ZeroCardViewAsSkill
-// {
-// public:
-//     BreastplateViewAsSkill() : ZeroCardViewAsSkill("Breastplate")
-//     {
-//     }
-// 
-//     virtual const Card *viewAs() const
-//     {
-//         TransferCard *card = new TransferCard;
-//         card->addSubcard(Self->getArmor());
-//         card->setSkillName("transfer");
-//         return card;
-//     }
-// };
-
 class BreastplateSkill : public ArmorSkill
 {
 public:
@@ -262,7 +246,6 @@ public:
     {
         events << DamageInflicted;
         frequency = Compulsory;
-        //view_as_skill = new BreastplateViewAsSkill;
     }
 
     virtual QStringList triggerable(TriggerEvent, Room *, ServerPlayer *player, QVariant &data, ServerPlayer* &) const
